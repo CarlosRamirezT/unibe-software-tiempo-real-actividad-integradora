@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Monitoreo en Tiempo Real de la Actividad del Usuario
 
 El proyecto consiste en un sistema que monitorea en tiempo real la actividad del usuario en la PC. La aplicación captura datos como la aplicación activa, el consumo de internet, las pulsaciones del teclado y los movimientos y clics del mouse, permitiendo almacenar y visualizar esta información de forma dinámica para el análisis y optimización de la productividad.
