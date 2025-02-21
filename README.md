@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Monitoreo en Tiempo Real de la Actividad del Usuario
 
 El proyecto consiste en un sistema que monitorea en tiempo real la actividad del usuario en la PC. La aplicación captura datos como la aplicación activa, el consumo de internet, las pulsaciones del teclado y los movimientos y clics del mouse, permitiendo almacenar y visualizar esta información de forma dinámica para el análisis y optimización de la productividad.
@@ -147,3 +148,10 @@ python app.py
 
 La interfaz gráfica se iniciará mostrando la monitorización en tiempo real de la actividad del usuario.
 
+## Implementación de la Arquitectura Semáforo
+
+(En el release 1.1)
+
+La implementación de la arquitectura basada en semáforos consistió en proteger el acceso a la lista global de eventos mediante un mecanismo de sincronización. Para ello, se creó un semáforo que actúa como mutex (o lock) para garantizar que solo un hilo pueda modificar la lista a la vez, evitando condiciones de carrera. Cada función de captura (ya sea para la aplicación activa, el uso de internet, el teclado o el mouse) adquiere el lock antes de añadir un nuevo evento a la lista y lo libera inmediatamente después, asegurando así que los datos se actualicen de forma consistente.
+
+Se implementó un semáforo contable para indicar la cantidad de eventos disponibles. Este semáforo se incrementa cada vez que se añade un evento y se decrementa cuando el proceso encargado de almacenar o procesar esos eventos (el productor/consumidor) los extrae de la lista. De esta manera, el procesador puede esperar hasta que haya eventos disponibles, adquiriendo el lock para extraer un evento de forma segura antes de liberarlo. En la interfaz gráfica, se adquiere el mismo lock para hacer una copia segura de la lista de eventos y mostrar la información en los gráficos y logs, sin interferir con la operación de otros hilos. Esta arquitectura asegura la integridad de los datos y permite una sincronización eficaz en un entorno de programación en tiempo real.
