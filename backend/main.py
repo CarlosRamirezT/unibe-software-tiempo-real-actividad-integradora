@@ -12,9 +12,5 @@ def main():
     # Iniciar hilo para procesar eventos
     threading.Thread(target=process_events, daemon=True).start()
     
-    # Mantener el hilo principal activo
-    while True:
-        pass
-
 if __name__ == "__main__":
     main()
