@@ -3,9 +3,4 @@
 wheel==0.38.4
 matplotlib==3.6.3
 numpy==1.23.5
-threading
-time
-random
-datetime
-tkinter
-sqlite3
+thread

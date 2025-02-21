@@ -89,8 +89,8 @@ pyenv virtualenv-init
 ### Instalar Python 3.8 (o superior) usando pyenv:
 
 ```bash
-pyenv install 3.9.18
-pyenv global 3.9.18
+pyenv install 3.10.16
+pyenv global 3.10.16
 ```
 
 ### Verificar la versión de Python:
@@ -110,13 +110,16 @@ cd monitoring_system_stageX
 ### Crear un entorno virtual (opcional, pero recomendado):
 
 ```bash
-pyenv virtualenv 3.9.18 unibe-software-tiempo-real-actividad-4
+rm -rf ~/.pyenv/versions/unibe-software-tiempo-real-actividad-4
+pyenv virtualenv 3.10.16 unibe-software-tiempo-real-actividad-4
 pyenv activate unibe-software-tiempo-real-actividad-4
+python --version
 ```
 
 ### Instalar las dependencias:
 
 ```bash
+python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
