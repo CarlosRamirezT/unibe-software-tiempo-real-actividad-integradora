@@ -1,5 +1,5 @@
 import threading
-from backend.main import main as backend_init
+from backend.main import start_backend as backend_init
 from ui.app import start_ui as frontend_init
 
 def main():
