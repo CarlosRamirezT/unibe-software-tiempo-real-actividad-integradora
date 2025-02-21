@@ -1,5 +1,5 @@
 import tkinter as tk
-from ui_helper import update_status
+from .ui_helper import update_status
 
 def main():
     root = tk.Tk()

@@ -1,6 +1,6 @@
 import threading
-from data_capture import capture_active_app, capture_internet_usage, capture_keyboard, capture_mouse
-from data_processor import process_events
+from .data_capture import capture_active_app, capture_internet_usage, capture_keyboard, capture_mouse
+from .data_processor import process_events
 
 def main():
     # Iniciar hilos para la captura de datos

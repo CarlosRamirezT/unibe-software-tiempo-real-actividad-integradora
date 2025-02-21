@@ -1,6 +1,6 @@
 import time
-from db_handler import store_event
-from data_capture import events
+from .db_handler import store_event
+from .data_capture import events
 
 def process_events():
     while True:
